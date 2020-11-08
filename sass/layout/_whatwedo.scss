@@ -4,17 +4,12 @@
 .img-styles {
   position: relative;
   margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 }
-.img-styles:last-child {
-  margin-right: 0px;
-}
-.absolute-what-we-do {
-  position: absolute;
-  width: 100%;
-  height: 24%;
-  bottom: 0;
-  background: rgba(47, 48, 58, 0.8);
-}
+
 .what-do-text {
   color: white;
   font-weight: 700;
@@ -25,6 +20,15 @@
   text-align: center;
   padding-top: 27px;
 }
+
+.absolute-what-we-do {
+  position: absolute;
+  width: 100%;
+  height: 24%;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+
 .what-we-do-our-team {
   font-weight: 700;
   font-size: 36px;

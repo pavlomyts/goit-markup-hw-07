@@ -1,94 +1,124 @@
 .footer {
   background: #2f303a;
+
+  &-logo {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+  }
+  &-container {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &-tel-link {
+    font-family: $body-main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &-info {
+    display: block;
+    margin-right: 70px;
+  }
+  &-form {
+    background-color: $footer-backgraund;
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding-left: 16px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &-email {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &-send-item {
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  &-join-us,
+  &-subscribe {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.641;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  &-social-item {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+  }
+  &-social-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:last-child {
+      margin-right: 10px;
+    }
+    &:hover,
+    &:focus {
+      background-color: #2196f3;
+    }
+  }
 }
-.footer-logo {
-  font-family: var(--secondary-font);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-}
-.footer-container {
-  display: flex;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+
 .address {
-  font-family: var(--body-main-font);
+  font-family: $body-main-font;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #ffffff;
-}
-.address-list-style {
-  padding-top: 20px;
+
+  &-list-style {
+    padding-top: 20px;
+  }
 }
 .contact-link-style {
   margin-bottom: 9px;
 }
-.footer-tel-link {
-  font-family: var(--body-main-font);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
 .join-us {
   display: block;
   list-style: none;
   margin-right: 70px;
 }
-
 .subscribe-us {
   display: block;
   list-style: none;
 }
-.footer-info {
-  display: block;
-  margin-right: 70px;
-}
-.footer-join-us,
-.footer-subscribe {
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  line-height: 1.641;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-.foter-social-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.foter-social-items:last-child {
-  margin-right: 10px;
-}
-.foter-social-items:hover,
-.foter-social-items:focus {
-  background-color: #2196f3;
-}
-.footer-social-item {
-  width: 20px;
-  height: 20px;
-  fill: #ffffff;
-}
 .button-footer {
-  font-family: var(--body-main-font);
+  font-family: $body-main-font;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -106,32 +136,7 @@
   justify-content: center;
   align-items: center;
 }
-.form-email-footer {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 20px;
-}
-.footer-form {
-  background-color: var(--footer-backgraund);
-  width: 358px;
-  height: 50px;
-  margin-right: 12px;
-  padding-left: 16px;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-}
 
-.footer-form::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.footer-send-item {
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-}
 .social-list {
   display: flex;
   justify-content: center;

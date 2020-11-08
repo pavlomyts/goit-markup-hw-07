@@ -5,9 +5,10 @@
 }
 .bottom-styles {
   margin-right: 8px;
-}
-.bottom-styles:last-child {
-  margin-right: 0px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 }
 
 .button-portfolio {
@@ -27,13 +28,15 @@
   padding-bottom: 6px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $button-portfolio-backgraund;
+    color: $button-portfolio-text-color;
+    border: none;
+  }
 }
-.button-portfolio:hover,
-.button-portfolio:focus {
-  background-color: var(--button-portfolio-backgraund);
-  color: var(--button-portfolio-text-color);
-  border: none;
-}
+
 .main-menu {
   padding-top: 94px;
   padding-bottom: 94px;
