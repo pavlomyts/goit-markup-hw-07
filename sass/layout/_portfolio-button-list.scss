@@ -1,0 +1,40 @@
+.button-list-menu {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+.bottom-styles {
+  margin-right: 8px;
+}
+.bottom-styles:last-child {
+  margin-right: 0px;
+}
+
+.button-portfolio {
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  border: none;
+  box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px #00000024,
+    0px 2px 1px #00000033;
+  border-radius: 4px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-portfolio:hover,
+.button-portfolio:focus {
+  background-color: var(--button-portfolio-backgraund);
+  color: var(--button-portfolio-text-color);
+  border: none;
+}
+.main-menu {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

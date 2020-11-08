@@ -1,0 +1,200 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+  overflow: auto;
+}
+.modal {
+  position: relative;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: #fff;
+
+  transform: scale(1);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 15px;
+}
+.close-button-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+.close-button-modal:hover {
+  fill: var(--accent-hover);
+}
+
+.modal-form-container {
+  padding: 40px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+}
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--main-font);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+/* modal input!!!!!!!!!!!!!!!!!!!!!!!!! */
+.input {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+  padding-left: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input:focus,
+.textarea-input:focus {
+  outline: none;
+  border: 1px solid #2196f3;
+}
+.input:focus + .modal-svg {
+  fill: #2196f3;
+}
+.form-label::placeholder {
+  font: var(--body-main-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-title {
+  font: var(--body-main-font);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  padding-bottom: 12px;
+}
+
+.textarea-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+}
+.modal-svg {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  display: flex;
+  top: 55%;
+  left: 15px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* hidden!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.visualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* hidden!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!checkbox!!!!!!!!!!! */
+.modal-form-policy::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+.modal-form-policy {
+  margin-left: 10px;
+  margin-top: 12px;
+}
+.modal-policy:checked + .modal-form-policy::before {
+  background-color: var(--accent-color);
+  background-position: center;
+  background-image: url(../images/svg/confrim-policy.svg);
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.form-policy-confirm {
+  font-family: var(--body-main-font);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+/* !!!!!!!!checkbox!!!!!!!!!!! */
+.form-confrim-label {
+  font-family: var(--body-main-font);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #2196f3;
+}
+.button-modal {
+  font-family: var(--body-main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  min-width: 200px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #2196f3;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.visualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/component/modal-button.scss"
+    ],
+    "names": [],
+    "file": "modal-button.css"
+}

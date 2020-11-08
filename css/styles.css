@@ -1,3 +1,5 @@
+/* !!!!!!!!!!!  var  !!!!!!!!!!! */
+
 :root {
   --accent-color: #2094f3;
   --header-backgraund: #ffffff;
@@ -10,7 +12,7 @@
   --accent-hover: #2196f3;
   --footer-backgraund: #2f303a;
 }
-
+/* !!!!!!!!!!!!!!! base!!!!!!!!!!!!!! */
 *,
 ::before,
 ::after {
@@ -30,7 +32,14 @@ body {
 img {
   display: block;
 }
-/* HEARED */
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* !123!!!!!!!!!!!!!!!!!!     HEARED !!!!!!!!!!!!!!!!!!!!!!! */
 .header {
   color: var(--header-backgraund);
   display: block;
@@ -46,7 +55,9 @@ img {
 .navigation-list-item:not(:last-child) {
   margin-right: 30px;
 }
-
+.navigation-list-item-contact {
+  margin-right: 30px;
+}
 .contact-list {
   display: flex;
   margin-left: auto;
@@ -61,7 +72,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--header-logo);
 }
-.contact-list .navigation-list-item {
+.contact-list {
   margin-right: 30px;
 }
 .header-flex-conteiner {
@@ -100,14 +111,7 @@ img {
 .navigation-list-item {
   position: relative;
 }
-.active {
-  color: #2196f3;
-}
-.navigation-list-link:hover::after {
-  opacity: 1;
-}
-
-.navigation-list-link::after {
+.navigation-list-item::after {
   content: "";
   position: absolute;
   display: block;
@@ -115,12 +119,29 @@ img {
   height: 4px;
   bottom: -31px;
   background-color: #2196f3;
-  /* bottom: -31px; */
+
   border-radius: 4px;
   opacity: 0;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.active {
+  color: #2196f3;
+}
+.active::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  bottom: -31px;
+  background-color: #2196f3;
+  border-radius: 4px;
+}
+.navigation-list-item:hover::after {
+  opacity: 1;
+}
+
 .navigation-list-link:hover::after .icon-header {
   fill: #757575;
   margin-right: 10px;
@@ -142,8 +163,8 @@ img {
   fill: #757575;
   margin-right: 10px;
 }
-
-/* MAIN */
+/* cur */
+/*!!!!!!!!!!!!!!!! MAIN !!!!!!!!!!!!!!!!!!!!!!!!*/
 .hero-banner {
   background-image: linear-gradient(
       to right,
@@ -155,6 +176,8 @@ img {
   background-color: #2f303a;
   background-size: cover;
   max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .conteiner-hero {
   margin-right: auto;
@@ -166,7 +189,7 @@ img {
   max-width: 696px;
   margin-bottom: 30px;
 }
-.button {
+.button-hero {
   font-family: var(--body-main-font);
   font-style: normal;
   font-weight: 700;
@@ -191,17 +214,21 @@ img {
   text-transform: uppercase;
   color: #ffffff;
 }
-.padding-top {
-  padding-top: 94px;
-}
-.padding-bottom {
+/* cut */
+
+.padding-bottom-what-we-do {
   padding-bottom: 94px;
 }
+
+/* feactures!!!!!!!!!!!!!!!!!!!11 */
 .flex-list {
   display: flex;
 }
 .feactures-list-style {
   margin-right: 30px;
+}
+.padding-top-feactures {
+  padding-top: 94px;
 }
 .feactures-list-style::before {
   display: block;
@@ -218,14 +245,33 @@ img {
   background-image: url(../images/svg/antenna1.svg);
 }
 .icon-clock::before {
-  background-image: url(../images/svg/clock\ 1.svg);
+  background-image: url(../images/svg/clock\1.svg);
 }
 .icon-diagram::before {
-  background-image: url(../images/svg/diagram\ 1.svg);
+  background-image: url(../images/svg/diagram\1.svg);
 }
 .icon-astronaut::before {
-  background-image: url(../images/svg/astronaut\ 1.svg);
+  background-image: url(../images/svg/astronaut\1.svg);
 }
+.feactures-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-top: 10px;
+}
+.feactures-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* !!!!!!!!! end feactures */
+
+/* !!!!!!!!!!!!!!!!! what-we-do */
 .what-do-pictures {
   display: flex;
 }
@@ -243,6 +289,16 @@ img {
   bottom: 0;
   background: rgba(47, 48, 58, 0.8);
 }
+.what-we-do-our-team {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+  color: #212121;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-top: 94px;
+}
 .what-do-text {
   color: white;
   font-weight: 700;
@@ -253,6 +309,12 @@ img {
   text-align: center;
   padding-top: 27px;
 }
+.padding-bottom-what-we-do {
+  padding-bottom: 94px;
+}
+/*!!!!!!!!!!!!!!! end what-we-do !!!!!!!!!!!!!!!!!!*/
+
+/* !!!!!!!!!!!!!clients!!!!!!!!! */
 .clients {
   width: 1200px;
   padding-left: 15px;
@@ -434,7 +496,7 @@ img {
   justify-content: center;
   margin-left: 10px;
 }
-/* portfolio */
+/* portfolio !!!!!!!!!!!!!!!!!!!!*/
 .button-portfolio {
   display: inline-block;
   text-align: center;
@@ -459,31 +521,7 @@ img {
   color: var(--button-portfolio-text-color);
   border: none;
 }
-.feactures-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-  color: #757575;
-  margin-top: 10px;
-}
-.feactures-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-.what-we-do-our-team {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.166;
-  letter-spacing: 0.03em;
-  color: #212121;
-  text-align: center;
-  margin-bottom: 50px;
-  padding-top: 94px;
-}
+/* our-team!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .team-title {
   font-weight: 500;
   font-size: 16px;
@@ -546,6 +584,8 @@ img {
   text-align: center;
   margin-top: 10px;
 }
+/* !!!!!!!!!!!!!!!eand our-team */
+
 /* !!!!!!!!!!!!PORTFOLIO !!!!!!!!!!!!!!!!!!!!*/
 
 .button-list-menu {
@@ -644,14 +684,8 @@ img {
 .project-img-style:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
-.conteiner {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
+/* !!!!!!!!!!!!!!!!!!!! backdrop!!!!!!!!! */
 .backdrop {
   position: fixed;
   top: 0;
@@ -672,6 +706,15 @@ img {
 
   transform: scale(1);
 }
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+/* !!!!!!!!!!!!!!.modal-form-container !!!!!!!!!!!!!!!!!!!!!{
+  
+ */
+/* !!!!!!!!!!1 modal form!!!!!!!!!!! */
 .modal-form {
   display: flex;
   justify-content: center;
@@ -694,11 +737,6 @@ img {
   fill: var(--accent-hover);
 }
 
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
 .modal-form-container {
   padding: 40px;
 }
@@ -718,9 +756,7 @@ img {
   letter-spacing: 0.01em;
   color: #757575;
 }
-/* !!!!!!!!!!!!!!.modal-form-container !!!!!!!!!!!!!!!!!!!!!{
-  
- */
+/* modal input!!!!!!!!!!!!!!!!!!!!!!!!! */
 .input {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -773,6 +809,7 @@ img {
   left: 15px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* hidden!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .visualy-hidden {
   position: absolute;
   width: 1px;
@@ -783,21 +820,29 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* hidden!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!checkbox!!!!!!!!!!! */
 .modal-form-policy::before {
   display: inline-block;
   content: "";
   width: 16px;
   height: 15px;
-  outline: 1px solid #212121;
+  border: 2px solid #212121;
   margin-right: 8px;
+  border-radius: 3px;
 }
-
+.modal-form-policy {
+  margin-left: 10px;
+  margin-top: 12px;
+}
 .modal-policy:checked + .modal-form-policy::before {
   background-color: var(--accent-color);
   background-position: center;
   background-image: url(../images/svg/confrim-policy.svg);
   background-repeat: no-repeat;
+  border: none;
 }
+
 .form-policy-confirm {
   font-family: var(--body-main-font);
   font-weight: normal;
@@ -806,7 +851,7 @@ img {
   letter-spacing: 0.03em;
   color: #757575;
 }
-
+/* !!!!!!!!checkbox!!!!!!!!!!! */
 .form-confrim-label {
   font-family: var(--body-main-font);
   font-weight: normal;
